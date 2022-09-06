@@ -48,7 +48,38 @@ function dnaToRna () {
 console.log(dnaToRna(dna));
 
  //Other best practices solutions-
- 
+
 function DNAtoRNA(dna){
     return dna.replace(/T/g, 'U');
   }
+
+// 04. Abbreviate a Two Word Name -> The output should be two capital letters with a dot separating them.
+//My solution - 
+
+let nam = "shree ram"
+function abbrevName(nam) {
+    let namSplit = nam.split(' ')
+    console.log(namSplit);
+    let firstInitial = namSplit[0].substring(0,1).toUpperCase()
+
+    let lastName = namSplit[1]
+    let lastInitial = namSplit[1].substring(0,1).toUpperCase()
+    console.log(firstInitial)
+    console.log(lastInitial)
+
+    return `${firstInitial}.${lastInitial}`
+}
+console.log(abbrevName(nam))
+
+ //Other best practices solutions-
+ function abbrevName(name){
+
+    var nameArray = name.split(" ");
+    return (nameArray[0][0] + "." + nameArray[1][0]).toUpperCase();
+  }
+
+  //OR 
+  function abbrevName(name){
+    return name.split(' ').map(i => i[0].toUpperCase()).join('.')
+
+}
