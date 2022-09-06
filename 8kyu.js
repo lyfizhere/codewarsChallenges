@@ -17,3 +17,21 @@ function numberToString(num) {
     // Return a string of the number here!
     return String(num);
   }
+
+//02. Convert boolean values to strings 'Yes' or 'No'
+//My Solution -
+function boolToWord( bool ) {
+    if (bool) {
+      return "Yes";
+    } else if(!bool) {
+      return "No";
+    }
+  }
+  console.log(boolToWord(0));
+
+ //Other best practices solutions- 
+ function boolToWord( bool ){
+    return bool ? 'Yes':'No';
+  }
+  // OR 
+  let boolToWord = bool => bool ? 'Yes' : 'No';
