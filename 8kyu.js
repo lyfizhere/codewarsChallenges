@@ -35,3 +35,20 @@ function boolToWord( bool ) {
   }
   // OR 
   let boolToWord = bool => bool ? 'Yes' : 'No';
+
+// 03. DNA TO RNA Conversion - Create a function which translates a given DNA string into RNA.
+//For example: "GCAT" => "GCAU"
+
+//My Soultion - 
+let dna = "GCAT"
+function dnaToRna () {
+    let rna = dna.replaceAll("T","U")
+    return rna;
+}
+console.log(dnaToRna(dna));
+
+ //Other best practices solutions-
+ 
+function DNAtoRNA(dna){
+    return dna.replace(/T/g, 'U');
+  }
