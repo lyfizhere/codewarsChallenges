@@ -83,3 +83,23 @@ console.log(abbrevName(nam))
     return name.split(' ').map(i => i[0].toUpperCase()).join('.')
 
 }
+
+// 05. Given an array of integers, return a new array with each value doubled.
+// My Solution - 
+let arr = [2, 4, 5]
+let arr2 = [];
+function doubleTheArr(arr){
+  for (i=0; i<arr.length; i++) {
+    arr2[i] = 2*arr[i]
+  }
+  return arr2;
+}
+console.log(doubleTheArr(arr))
+
+//Other best practices solutions-
+function maps(x){
+  return x.map(n => n * 2);
+}
+
+//OR
+maps = x => x.map(e => e * 2);
