@@ -103,3 +103,24 @@ function maps(x){
 
 //OR
 maps = x => x.map(e => e * 2);
+
+//06. Complete the square sum function so that it squares each number passed into it and then sums the results together.
+//My Solution - 
+let arr1 = [1,2,8]
+function squareThenSum (arr1) {
+    let sum =0;
+    for(i=0; i<arr1.length; i++) {
+        let squaredArr = []
+        squaredArr[i] = arr1[i]**2
+        sum = sum + squaredArr[i]
+    }
+    return sum;
+}
+console.log(squareThenSum(arr1))
+
+//Other best practices solutions-
+function squareSum(numbers){
+  return numbers.reduce(function(sum, n){
+    return (n*n) + sum;
+  }, 0)
+}
